@@ -1,0 +1,23 @@
+<!doctype html>
+{% load staticfiles %}
+<HTML xmlns="http://www.w3.org/1999/html">
+<Head><Title>Automation Portal </Title>
+		    <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
+		<script src='{%static "js/JSautomationUI.js" %}' type="text/javascript"></script>
+</Head>
+<body>
+<form method="post" target="_blank">
+	<div class="box">
+	<font color = "#FF0000" size="4"><b>
+		{% if messages %}
+		<ol class="messages">
+			{% for message in messages %}
+			<p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+			{% endfor %}
+		</ol>
+		{% endif %}
+	</b></font></div>
+
+</form>
+</body>
+</HTML>

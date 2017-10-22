@@ -1,0 +1,29 @@
+<!doctype html>
+{% extends "base.html" %}
+{% csrf_token %}
+{% block pagecontent %}
+
+    <!-- ===============================Release Management Test Suite Details Start=====================================-->
+	<TABLE width="100%" id="RMScriptTable" class="hideRMScriptTable">
+      {% include "RMcontent.html" %}
+	</TABLE>
+	<!-- ===============================Release Management Test Suite Details End=======================================-->
+
+    <br>
+
+    <!----=============================Approval Type Test Suite Details Start===========================================-->
+	<TABLE width="100%" id="ApprovalTypeTable" class="hideApprovalTypeTable">
+    {% include "ApprovalTypecontent.html" %}
+	</TABLE>
+	<!----=============================Approval Type Test Suite Details End=============================================-->
+
+
+	<!----=============================Light Management Test Suite Details Start=======================================-->
+    <TABLE width="100%" id="LightSanityTable" class="hideLightSanityTable">
+    {% include "LightSanitycontent.html" %}
+	</TABLE>
+	<!----=============================Light Management Test Suite Details End=========================================-->
+
+{% endblock pagecontent %}
+
+

@@ -1,0 +1,97 @@
+<!doctype html>
+{% load staticfiles %}
+<HTML xmlns="http://www.w3.org/1999/html">
+<Head><Title>Automation Portal </Title>
+		<link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
+		<script src='{%static "js/JSautomationUI.js" %}' type="text/javascript"></script>
+</Head>
+<body>
+<form>
+	<font face="Calibri" color="black">
+
+	{% csrf_token %}
+		<center>
+			<a href="http://www.equinix.com/">
+			<img src ='{%static "img/Equinixlogo.png"%}' height="60" width="100" align="left">
+			</a>
+			<img src ='{%static "img/heading.png"%}' height="60" width="500" align="center" title="Automation Test Engine" alt="Automation Test Engine">
+        </center>
+		<ul>
+			<li><a href="/ate"><font face = "calibri" size=3><b>Home</b></font></a></li>
+			<li><a href="/ate/tool/" class = "active"><font face = "calibri" size=3><b>ATE</b></font></a></li>
+			<li><a href="/upcomingfeatures"><font face = "calibri" size=3><b>Upcoming Features</b></font></a></li>
+			<li><a href="/help"><font face = "calibri" size=3><b>Help</b></font></a></li>
+		</ul>
+	<div class="box">
+    <!--<font color = "#FF0000" size="4"><b>Available Test Suites</b></font><br>-->
+	<font color = "#FF0000" size="4">
+	<b>
+	Thank You for Submitting the request. With limited machines available, please submit next request after span of Two hours
+	</b></font><br>
+	&emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+	<br>
+    <!--<input type="checkbox" name="RMSanity" value="RMSanity" id="RMSanity" onclick="showhide()" checked="checked">Release Mgmt Sanity<input type="checkbox" name="RMSanity" value="RMSanity" id="RMSanity" onclick="showhide()" checked="checked">Release Mgmt Sanity-->
+	<input type="checkbox" name="RMSanity" value="RMSanity" id="RMSanity" checked="checked" disabled>Release Mgmt Sanity
+	<input type="hidden" name="RMSanity" value="RMSanity">
+		&emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+	<input type="checkbox" name="lightsanity" value="lightsanity" id="lightsanity" onclick="showhidelstable()" disabled>Integration Check
+		&emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+    <input type="checkbox" name="fullsanity" value="fullsanity" id="fullsanity" disabled>Sanity
+		&emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+    <input type="checkbox" name="regression" value="regression" id="regression" disabled>Regression
+		&emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+	<input type="checkbox" name="macd" value="macd" id="macd" disabled>MACD
+    <br><br>
+	</div>
+    <br>
+
+	<!-- Release Management Test Suite Details -->
+	<link rel="stylesheet" href='{%static "css/styleAutomationUI.css"%}' type="text/css">
+	<!--<TABLE width="80%" border="1" BORDER-COLOR=BLACK id="RMScriptTable" class="hideRMTable">-->
+	<TABLE width="100%" id="RMScriptTable">
+	  <TR>
+	       <TH COLSPAN=7 bgcolor=Black><font size=4 face="Calibri" color="black">Release Management Test Suite Details</font></TH>
+      </TR>
+	  <tr >
+		    <TD class = "select" align="center" COLSPAN=7>
+				<select name="RMenvironment" title="Please select environment" id="RMenvironment">
+						<option>{{RMenvironment}}</option>
+				</select>
+  			</TD>
+	  </tr>
+          {% block RMcontent %}{% endblock RMcontent %}
+	</TABLE>
+
+	<br>
+
+	<!----Light Management Test Suite Details --->
+	<link rel="stylesheet" href='{%static "css/styleAutomationUI.css"%}' type="text/css">
+	<TABLE width="80%" border="1" BORDER-COLOR=BLACK id="LightSanityTable" class="hideLightSanityTable">
+	  <TR>
+	       <TH COLSPAN=7 bgcolor=Black><font size=3 color=red face=Calibri>Light Sanity Test Suite Details</font></TH>
+      </TR>
+          {% block lightsanitycontent %}{% endblock lightsanitycontent %}
+	</TABLE>
+	<input type="hidden" id="lightsanityrowcount" value="">
+
+	<!--<button onclick="StartAllScripts()">Start All Scripts</button> -->
+	<br><br>
+		&emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;
+	<!--<input title="Execute Script" type="submit" value="Execute" name="Execute">-->
+	&emsp; &emsp; &emsp;&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	WatchList <input type="email" name="email" id="email" placeholder="Enter a valid email address" value="{{Email}}">
+	&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp;
+	&emsp; &emsp; &emsp;&emsp;
+	<button title="Click me to Email Report" type="button">Send Report</button>
+	<br><br>
+	<hr>
+	 <footer>
+		<center>
+			<font face="Calibri" color="#000033">Email your Query/Feedback to : <a href="mailto:automation_qa_team@ap.equinix.com">Automation QA Team</a></font>
+		</center>
+	 </footer>
+		<hr>
+	</font>
+	</form>
+</body>
+</HTML>

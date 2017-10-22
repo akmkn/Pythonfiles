@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="textfield2" placeholder="hi" value="{{text2}}">
+    <select name="RMenvironment1" title="Please select environment">
+            <option>{{select1}}</option>
+    </select>
+    <p>{{select1}}</p>
+    <input type="submit" value="click">
+</form>
+</body>
+</html>

@@ -1,0 +1,67 @@
+{% block approvaltypecontent %}
+
+<!-- Approval Type select scripts -->
+<input type="hidden" name="ApprovalTypeScriptCounter" value="1" id="ApprovalTypeScriptCounter">
+ <TR>
+      <TH COLSPAN=7 bgcolor=Black><font size=4 color=red face=Calibri>Approval Type Test Suite Details</font></TH>
+ </TR>
+
+<tr>
+    <TD class = "select" align="center" COLSPAN=7>
+        Environment <select name="ApvlTypeEnvironment" title="Please select environment" id="ApvlTypeEnvironment" onchange="setApvlTypeEnvironmentatRowLevel()">
+                <option value="UAT4">UAT4</option>
+                <option value="UAT1">UAT1</option>
+                <option value="SIT4">SIT4</option>
+                <option value="SIT1">SIT1</option>
+        </select>
+    </TD>
+</tr>
+
+<TR>
+  <TH><font face="Calibri" color="red" size="4">Environment</font></TH>
+  <TH><font face="Calibri" color="red" size="4">Test Script</font></TH>
+  <TH><font face="Calibri" color="red" size="4">Machine</font></TH>
+  <TH hidden><font face="Calibri" color="red" size="4">Execute</font></TH>
+  <TH><font face="Calibri" color="red" size="4">Status</font></TH>
+  <TH COLSPAN=2><font face="Calibri" color="red" size="4">Action</font></TH>
+</TR>
+
+<TR ALIGN=CENTER>
+  <TD class = "select">
+        <select name="ApvlTypeEnvironment1" id="ApvlTypeEnvironment1">
+                <option value="UAT4">UAT4</option>
+                <option value="UAT1">UAT1</option>
+                <option value="SIT4">SIT4</option>
+                <option value="SIT1">SIT1</option>
+        </select>
+  </TD>
+  <TD>
+       <!-- <select name="ApvlTypescript">
+                <option value="AP_PrintConfiguredQuote_PCKBP" selected >AP_PrintConfiguredQuote_PCKBP</option>
+                <option value="AP_Product_Private Cage with kVA Based Power">AP_Product_Private Cage with kVA Based Power</option>
+                <option value="AP_Product_ConfigurableAccessories">AP_Product_ConfigurableAccessories</option>
+                <option value="AP_Product_EQX_IEPP_Equinix Internet Exchange Port">AP_Product_Equinix Internet Exchange Port</option>
+        </select> -->
+         <select name="ApvlTypescript1">
+              {% for key,value in ApvlTypeDict_ScriptNames.items %}
+                <option value="{{ value }}">{{ value }}</option>
+              {% endfor %}
+        </select>
+
+  </TD>
+  <TD class = "select">
+        <select name="ApvlTypemachine1">
+            <option value="ny2wnlrlg01" selected>ny2wnlrlg01</option>
+            <option value="dc1wnlrlg01">dc1wnlrlg01</option>
+            <option value="pa2wnlrlg01">pa2wnlrlg01</option>
+            <option value="fr2wnlrlg01">fr2wnlrlg01</option>
+        </select>
+  </TD>
+  <TD hidden><input type="checkbox" checked = "checked" name="ApvlTypeexecute1"></TD>
+  <TD>No Run</TD>
+  <TD><button title="Add Row" onclick="addrowforApvlType(); return false;" name="AddRowApprovalType">+</button> </TD>
+  <TD><button title="Delete Row" name="Delete Row" onclick="deleterowintable(this);">-</button> </TD>
+</TR>
+    {% endblock approvaltypecontent %}
+
+

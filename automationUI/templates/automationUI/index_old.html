@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+{% block RMcontent %}
+<!-- Release Management select scripts -->
+ <TR>
+      <TH><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Environment</p></TH>
+      <TH><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Test Script</p></TH>
+      <TH><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Machine</p></TH>
+      <TH><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Execute</p></TH>
+      <TH><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Status</p></TH>
+      <TH COLSPAN=2><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Action</p></TH>
+ </TR>
+<TR ALIGN=CENTER>
+  <TD class = "select">
+        <select name="RMenvironment1">
+                <option value="UAT4" selected>UAT4</option>
+                <option value="SIT4" disabled>SIT4</option>
+                <option value="SIT1" disabled>SIT1</option>
+        </select>
+  </TD>
+  <td>
+        <select name="RMscriptname1">
+                <option value="AP_PrintConfiguredQuote_PCKBP" selected >AP_PrintConfiguredQuote_PCKBP</option>
+                <option value="AP_Product_Private Cage with kVA Based Power" disabled>AP_Product_Private Cage with kVA Based Power</option>
+                <option value="AP_Product_ConfigurableAccessories" disabled>AP_Product_ConfigurableAccessories</option>
+                <option value="AP_Product_EQX_IEPP_Equinix Internet Exchange Port" disabled>AP_Product_EQX_IEPP_Equinix Internet Exchange Port</option>>
+        </select>
+  </td>
+  <TD class = "select">
+        <select name="RMmachine1">
+            <option value="ny2wnlrlg01" selected>ny2wnlrlg01</option>
+            <option value="dc1wnlrlg01" disabled>dc1wnlrlg01</option>
+            <option value="PA2wnlrlg01" disabled>PA2wnlrlg01</option>
+            <option value="FR2WNLRLG01" disabled>FR2WNLRLG01</option>
+        </select>
+  </TD>
+  <TD><input type="checkbox" checked = "checked" name="RMexecute1" disabled><input type="hidden" name="RMexecute1" value="on"></TD>
+
+  <TD><p style=font-family:Calibri;color:black> {{RM1statusval}} </p></TD>
+  <TD><button onclick="AddRow()" title="Add Row" disabled>+</button> </TD>
+  <TD><button onclick="DeleteRow()" title="Delete Row" disabled>-</button> </TD>
+    <!--<TD><button title="Stop Script" disabled>X</button> </TD>-->
+</TR>
+<TR ALIGN=CENTER>
+  <TD class = "select">
+        <select name="RMenvironment2">
+                <option value="UAT4" selected>UAT4</option>
+                <option value="SIT4" disabled>SIT4</option>
+                <option value="SIT1" disabled>SIT1</option>
+        </select>
+  </TD>
+  <td>
+        <select name="RMscriptname2">
+                <option value="AP_PrintConfiguredQuote_PCKBP" disabled >AP_PrintConfiguredQuote_PCKBP</option>
+                <option value="AP_Product_Private Cage with kVA Based Power" selected>AP_Product_Private Cage with kVA Based Power</option>
+                <option value="AP_Product_ConfigurableAccessories" disabled>AP_Product_ConfigurableAccessories</option>
+                <option value="AP_Product_EQX_IEPP_Equinix Internet Exchange Port" disabled>AP_Product_EQX_IEPP_Equinix Internet Exchange Port</option>
+        </select>
+  </td>
+  <TD class = "select">
+        <select name="RMmachine2">
+            <option value="ny2wnlrlg01" disabled >ny2wnlrlg01</option>
+            <option value="dc1wnlrlg01" selected>dc1wnlrlg01</option>
+            <option value="PA2wnlrlg01" disabled>PA2wnlrlg01</option>
+            <option value="FR2WNLRLG01" disabled>FR2WNLRLG01</option>
+        </select>
+  </TD>
+  <TD><input type="checkbox" checked = "checked" name="RMexecute2" disabled><input type="hidden" name="RMexecute2" value="on"></TD>
+  <TD><p style=font-family:Calibri;color:black> {{RM2statusval}} </p></TD>
+  <TD><button onclick="AddRow()" title="Add Row" disabled>+</button> </TD>
+  <TD><button onclick="DeleteRow()" title="Delete Row" disabled>-</button> </TD>
+    <!--<TD><button title="Stop Script" disabled>X</button> </TD>-->
+</TR>
+<TR ALIGN=CENTER>
+  <TD class = "select">
+        <select name="RMenvironment3">
+                <option value="UAT4" selected>UAT4</option>
+                <option value="SIT4" disabled>SIT4</option>
+                <option value="SIT1" disabled>SIT1</option>
+        </select>
+  </TD>
+  <td>
+        <select name="RMscriptname3">
+                option value="AP_PrintConfiguredQuote_PCKBP" disabled >AP_PrintConfiguredQuote_PCKBP</option>
+                <option value="AP_Product_Private Cage with kVA Based Power" disabled>AP_Product_Private Cage with kVA Based Power</option>
+                <option value="AP_Product_ConfigurableAccessories" selected>AP_Product_ConfigurableAccessories</option>
+                <option value="AP_Product_EQX_IEPP_Equinix Internet Exchange Port" disabled>AP_Product_EQX_IEPP_Equinix Internet Exchange Port</option>
+        </select>
+  </td>
+  <TD class = "select">
+        <select name="RMmachine3">
+            <option value="ny2wnlrlg01" disabled >ny2wnlrlg01</option>
+            <option value="dc1wnlrlg01" disabled>dc1wnlrlg01</option>
+            <option value="PA2wnlrlg01" selected>PA2wnlrlg01</option>
+            <option value="FR2WNLRLG01" disabled>FR2WNLRLG01</option>
+        </select>
+  </TD>
+  <TD><input type="checkbox" checked = "checked" name="RMexecute3" disabled><input type="hidden" name="RMexecute3" value="on"></TD>
+  <TD><p style=font-family:Calibri;color:black> {{RM3statusval}} </p></TD>
+  <TD><button onclick="AddRow()" title="Add Row" disabled>+</button> </TD>
+  <TD><button onclick="DeleteRow()" title="Delete Row" disabled>-</button> </TD>
+  <!--<TD><button title="Stop Script" disabled>X</button> </TD>-->
+</TR>
+<TR ALIGN=CENTER>
+  <TD class = "select">
+        <select name="RMenvironment4">
+                <option value="UAT4" selected>UAT4</option>
+                <option value="SIT4" disabled>SIT4</option>
+                <option value="SIT1" disabled>SIT1</option>
+        </select>
+  </TD>
+  <td>
+        <select name="RMscriptname4">
+                <option value="AP_PrintConfiguredQuote_PCKBP" disabled >AP_PrintConfiguredQuote_PCKBP</option>
+                <option value="AP_Product_Private Cage with kVA Based Power" disabled>AP_Product_Private Cage with kVA Based Power</option>
+                <option value="AP_Product_ConfigurableAccessories" disabled>AP_Product_ConfigurableAccessories</option>
+                <option value="AP_Product_EQX_IEPP_Equinix Internet Exchange Port" selected>AP_Product_EQX_IEPP_Equinix Internet Exchange Port</option>
+        </select>
+  </td>
+  <TD class = "select">
+        <select name="RMmachine4">
+            <option value="ny2wnlrlg01" disabled >ny2wnlrlg01</option>
+            <option value="dc1wnlrlg01" disabled>dc1wnlrlg01</option>
+            <option value="PA2wnlrlg01" disabled>PA2wnlrlg01</option>
+            <option value="FR2WNLRLG01" selected>FR2WNLRLG01</option>
+        </select>
+  </TD>
+  <TD><input type="checkbox" checked = "checked" name="RMexecute4" disabled><input type="hidden" name="RMexecute4" value="on"></TD>
+  <TD><p style=font-family:Calibri;color:black> {{RM4statusval}} </p></TD>
+  <TD><button title="Add Row" disabled>+</button> </TD>
+  <TD><button title="Delete Row" disabled>-</button> </TD>
+  <!--<TD><button title="Stop Script" disabled>X</button> </TD>-->
+</TR>
+{% endblock RMcontent %}
+
+{% block lightsanitycontent %}
+<!-- lightsanitycontent select scripts -->
+ <TR>
+      <TH><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Environment</p></TH>
+      <TH><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Test Script</p></TH>
+      <TH><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Machine</p></TH>
+      <TH><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Execute</p></TH>
+      <TH><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Status</p></TH>
+      <TH COLSPAN=2><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Action</p></TH>
+ </TR>
+<TR ALIGN=CENTER>
+  <TD class = "select">
+        <select name="lsenvironment">
+                <option value="UAT4">UAT4</option>
+                <option value="SIT4">SIT4</option>
+                <option value="SIT1">SIT1</option>
+        </select>
+  </TD>
+  <td>
+        <select name="lsscript">
+                <option value="AP_PrintConfiguredQuote_PCKBP" selected >AP_PrintConfiguredQuote_PCKBP</option>
+                <option value="AP_Product_Private Cage with kVA Based Power">AP_Product_Private Cage with kVA Based Power</option>
+                <option value="AP_Product_ConfigurableAccessories">AP_Product_ConfigurableAccessories</option>
+                <option value="AP_Product_EQX_IEPP_Equinix Internet Exchange Port">AP_Product_EQX_IEPP_Equinix Internet Exchange Port</option>
+        </select>
+  </td>
+  <TD class = "select">
+        <select name="lsmachine">
+            <option value="ny2wnlrlg01" selected>ny2wnlrlg01</option>
+            <option value="dc1wnlrlg01">dc1wnlrlg01</option>
+            <option value="PA2wnlrlg01">PA2wnlrlg01</option>
+            <option value="FR2WNLRLG01">FR2WNLRLG01</option>
+        </select>
+  </TD>
+  <TD><input type="checkbox" checked = "checked" name="lsexecute"></TD>
+  <TD><p> </p></TD>
+  <TD><button title="Add Row" onclick="addrowforlightsanity();return false;" name="Add Row">+</button> </TD>
+  <TD><button title="Delete Row" name="Delete Row" onclick="deleterowforlightsanity(this)">-</button> </TD>
+    <!--<TD><button title="Stop Script" disabled>X</button> </TD>-->
+</TR>
+{% endblock lightsanitycontent %}
+
+

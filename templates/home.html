@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
+ </head>
+<link rel="stylesheet" href='{%static "css/styleAutomationUI.css"%}' type="text/css">
+<body>
+<form target="_self">
+		<center>
+			<a href="http://www.equinix.com/">
+			<img src ='{%static "img/Equinixlogo.png"%}' height="60" width="100" align="left">
+			</a>
+			<img src ='{%static "img/heading.png"%}' height="60" width="500" align="center" title="Automation Test Engine" alt="Automation Test Engine">
+        </center>
+		<ul>
+			<li><a href="/ate" class = "active"><font face = "calibri" size=3><b>Home</b></font></a></li>
+			<li><a href="/ate/tool/"><font face = "calibri" size=3><b>ATE</b></font></a></li>
+			<li><a href="/upcomingfeatures"><font face = "calibri" size=3><b>Upcoming Features</b></font></a></li>
+			<li><a href="/help"><font face = "calibri" size=3><b>Help</b></font></a></li>
+		</ul>
+
+<font face="Calibri" color="black" size="4">
+&emsp;
+    <b>What is ATE?</b><br><br>&emsp;
+    Automation Test Engine is an automated tool designed to perform Sanity and Functional Testing on Siebel CRM application.<br>&emsp;
+    It offers simple single clicks to run Automated Test scripts. Users can use ATE to Test their required functionalities.<br>&emsp;
+    It does not matter if you know automation or not, ATE helps users to run automated test scripts in a click.<br>&emsp;
+    ATE serves the purpose of making sure that the Siebel CRM system is working fine for the expected functionalities.<br>&emsp;
+    <br>&emsp;
+    <b>Advantages</b><br><br>&emsp;
+    <i>Simple</i> - ATE offers the simplest single clicks to run Automated Test Scripts without any manual intervention
+    <br><br>&emsp;
+    <i>User friendly</i> – ATE helps the user in getting reports generated and notified in an email.
+    <br><br>&emsp;
+    <i>A la carte</i> - User can choose the required Functional scenario to be executed and Test set would be created accordingly.
+    <br><br>&emsp;
+    <i>HP ALM</i> – User does not need to login into HP ALM or QC to run the test scripts.
+    <br><br>&emsp;
+    <i>Test Data</i> – User does not need to enter any test data to test the requirements. The ATE tool will set the test data as per the requirement
+    <br><br>&emsp;
+    <i>Cross Environment Testing</i> - User can execute Test cases in different environments. Example: SIT and UAT.
+    <br><br>&emsp;
+    <b>Are you ready to use ATE?</b>
+    <br><br>&emsp;
+    Please click <a href="/ate/tool/" target="_self">here </a> or the ATE tab at the top to proceed in selecting your test needs
+    <br><br>&emsp;
+    Happy Testing
+    <br>
+    <br>
+
+</font>
+</form>
+</body>
+</html>

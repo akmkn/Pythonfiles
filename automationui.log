@@ -1,0 +1,386 @@
+2017-07-03 15:06:51,719:index:clientipaddress is 172.16.158.45
+2017-07-03 15:06:51,734:index:clientipaddressTostop is 172.16.158.45
+2017-07-03 17:22:39,825:index:clientipaddress is 172.16.158.45
+2017-07-03 17:22:39,825:index:clientipaddressTostop is 172.16.158.45
+2017-07-04 11:31:42,443:index:clientipaddress is 172.16.158.45
+2017-07-04 11:31:42,490:index:clientipaddressTostop is 172.16.158.45
+2017-08-15 11:45:10,181:get_response:Not Found: /favicon.ico
+2017-08-15 11:52:43,046:handle_uncaught_exception:Internal Server Error: /admin/automationUI/ate_proceedtosubmitflag/add/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 551, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\sites.py", line 224, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 1508, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 1408, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 1452, in _changeform_view
+    self.log_addition(request, new_object, change_message)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 724, in log_addition
+    object_repr=force_text(object),
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\encoding.py", line 80, in force_text
+    s = six.text_type(bytes(s), encoding, errors)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\models.py", line 67, in __str__
+    return str(self.rowid) +self.proceedtosubmitflag + self.RequestTime+ self.ClientRequestIP+ self.RMenvironment + self.Email + str(self.ExecuteCounter)
+TypeError: coercing to Unicode: need string or buffer, NoneType found
+2017-08-15 11:54:03,918:handle_uncaught_exception:Internal Server Error: /ate/tool/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 80, in index
+    tnow = t1val - initialrequesttime
+TypeError: unsupported operand type(s) for -: 'float' and 'unicode'
+2017-08-15 11:54:36,331:_reject:Forbidden (CSRF token missing or incorrect.): /ate/tool/
+2017-08-15 11:55:44,019:_reject:Forbidden (CSRF token missing or incorrect.): /ate/tool/
+2017-08-15 11:57:23,335:handle_uncaught_exception:Internal Server Error: /ate/tool/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 80, in index
+    tnow = t1val - initialrequesttime
+TypeError: unsupported operand type(s) for -: 'float' and 'unicode'
+2017-08-15 12:08:23,372:handle_uncaught_exception:Internal Server Error: /ate/tool/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 81, in index
+    tnow = t1val - float(initialrequesttime)
+ValueError: could not convert string to float: ""
+2017-08-15 12:10:18,858:handle_uncaught_exception:Internal Server Error: /admin/automationUI/ate_proceedtosubmitflag/2/change/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 551, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\sites.py", line 224, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 1511, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 1408, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 1455, in _changeform_view
+    self.log_change(request, new_object, change_message)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 740, in log_change
+    object_repr=force_text(object),
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\encoding.py", line 80, in force_text
+    s = six.text_type(bytes(s), encoding, errors)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\models.py", line 67, in __str__
+    return str(self.rowid) +self.proceedtosubmitflag + self.RequestTime+ self.ClientRequestIP+ self.RMenvironment + self.Email + str(self.ExecuteCounter)
+TypeError: coercing to Unicode: need string or buffer, NoneType found
+2017-08-15 12:10:32,224:handle_uncaught_exception:Internal Server Error: /admin/automationUI/ate_proceedtosubmitflag/2/change/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 551, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\sites.py", line 224, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 1511, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 1408, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 1455, in _changeform_view
+    self.log_change(request, new_object, change_message)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 740, in log_change
+    object_repr=force_text(object),
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\encoding.py", line 80, in force_text
+    s = six.text_type(bytes(s), encoding, errors)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\models.py", line 67, in __str__
+    return str(self.rowid) +self.proceedtosubmitflag + self.RequestTime+ self.ClientRequestIP+ self.RMenvironment + self.Email + str(self.ExecuteCounter)
+TypeError: coercing to Unicode: need string or buffer, NoneType found
+2017-08-15 12:13:52,506:_reject:Forbidden (CSRF token missing or incorrect.): /admin/automationUI/ate_proceedtosubmitflag/2/change/
+2017-08-15 12:16:08,542:handle_uncaught_exception:Internal Server Error: /ate/tool/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 71, in index
+    ExecuteCounter = int(RMcontentdict['ExecuteCounter'])
+TypeError: int() argument must be a string or a number, not 'NoneType'
+2017-08-15 12:17:20,713:handle_uncaught_exception:Internal Server Error: /ate/tool/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 71, in index
+    ExecuteCounter = int(RMcontentdict['ExecuteCounter'])
+TypeError: int() argument must be a string or a number, not 'NoneType'
+2017-08-15 12:24:57,371:index:proceedtosubmitflagvalue is True
+2017-08-15 12:30:20,647:handle_uncaught_exception:Internal Server Error: /ate/tool/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 91, in index
+    writeATE_RMData(request)  # ----------------write to newly created workbook----------------#
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 335, in writeATE_RMData
+    RMmachine = request.POST.get('RMmachine' + str(rm))
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\base.py", line 806, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\base.py", line 836, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\base.py", line 922, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\base.py", line 961, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\query.py", line 1061, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\sql\compiler.py", line 1099, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\backends\utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\backends\utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\backends\utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+IntegrityError: null value in column "Environment" violates not-null constraint
+DETAIL:  Failing row contains (1, Yes, [QualityCenter]Subject\Automation\ECO\Products\AutomationPortal\..., AP_PrintConfiguredQuote_PCKBP, Root\ECO Automation\Product-Execution\AutomationPortal, RMSanity, dc1wnlrlg01, , , No Run, , null, , , , All, , ).
+
+2017-08-15 12:32:51,809:handle_uncaught_exception:Internal Server Error: /ate/tool/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 94, in index
+    Email=Email, ExecuteCounter=ExecuteCounter)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 239, in writeATE_ProceedToSubmitFlag
+    writeProceedFlag = ATE_ProceedToSubmitFlag.objects.get(id=1)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+DoesNotExist: ATE_ProceedToSubmitFlag matching query does not exist.
+2017-08-15 12:40:23,451:handle_uncaught_exception:Internal Server Error: /ate/tool/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 94, in index
+    Email=Email, ExecuteCounter=ExecuteCounter)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 236, in writeATE_ProceedToSubmitFlag
+    Email = Email
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+DoesNotExist: ATE_ProceedToSubmitFlag matching query does not exist.
+2017-08-15 12:46:22,111:handle_uncaught_exception:Internal Server Error: /ate/tool/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 93, in index
+    writeATE_ProceedToSubmitFlag(False, t0, clientrequestip=clientipaddress, RMenvironment=RMenvironment,Email=Email, ExecuteCounter=ExecuteCounter)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 238, in writeATE_ProceedToSubmitFlag
+    writeProceedFlag = ATE_ProceedToSubmitFlag.objects.get(id=1)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+DoesNotExist: ATE_ProceedToSubmitFlag matching query does not exist.
+2017-08-15 13:19:52,859:get_response:Not Found: /favicon.ico
+2017-08-15 14:52:02,187:index:proceedtosubmitflagvalue is False
+2017-08-15 14:52:43,713:get_response:Not Found: /favicon.ico
+2017-08-15 14:59:32,026:handle_uncaught_exception:Internal Server Error: /ate/tool/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 69, in index
+    RMcontentdict = readATE_ProceedToSubmitFlag()
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 261, in readATE_ProceedToSubmitFlag
+    contextFlag = {'proceedtosubmitflag':proceedtosubmitflag,'RequestTime':RequestTime,'ClientRequestIP':ClientRequestIP,
+NameError: global name 'proceedtosubmitflag' is not defined
+2017-08-16 11:32:59,457:get_response:Not Found: /favicon.ico
+2017-08-16 11:33:10,444:handle_uncaught_exception:Internal Server Error: /admin/automationUI/ate_rmdata/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 551, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\sites.py", line 224, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 1662, in changelist_view
+    selection_note=_('0 of %(cnt)s selected') % {'cnt': len(cl.result_list)},
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\query.py", line 232, in __len__
+    self._fetch_all()
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\query.py", line 1103, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\sql\compiler.py", line 886, in execute_sql
+    raise original_exception
+ProgrammingError: column automationUI_ate_rmdata.RowID does not exist
+LINE 1: SELECT "automationUI_ate_rmdata"."id", "automationUI_ate_rmd...
+                                               ^
+
+2017-08-16 11:33:45,562:handle_uncaught_exception:Internal Server Error: /admin/automationUI/ate_rmdata/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 551, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\sites.py", line 224, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\contrib\admin\options.py", line 1662, in changelist_view
+    selection_note=_('0 of %(cnt)s selected') % {'cnt': len(cl.result_list)},
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\query.py", line 232, in __len__
+    self._fetch_all()
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\query.py", line 1103, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\db\models\sql\compiler.py", line 886, in execute_sql
+    raise original_exception
+ProgrammingError: column automationUI_ate_rmdata.RowID does not exist
+LINE 1: SELECT "automationUI_ate_rmdata"."id", "automationUI_ate_rmd...
+                                               ^
+
+2017-08-16 11:45:57,934:_reject:Forbidden (CSRF token missing or incorrect.): /ate/tool/
+2017-08-16 11:46:58,388:handle_uncaught_exception:Internal Server Error: /ate/tool/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 96, in index
+    ATE_RMData.delete()
+TypeError: unbound method delete() must be called with ATE_RMData instance as first argument (got nothing instead)
+2017-08-16 11:47:54,992:index:proceedtosubmitflagvalue is False
+2017-08-16 12:16:36,062:handle_uncaught_exception:Internal Server Error: /ate/tool/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 96, in index
+    ATE_RMData.delete(self)
+NameError: global name 'self' is not defined
+2017-08-16 12:18:50,492:index:proceedtosubmitflagvalue is False
+2017-08-16 12:19:56,111:handle_uncaught_exception:Internal Server Error: /ate/tool/
+Traceback (most recent call last):
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\mnairchand\Project\venv2\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\mnairchand\Project\venv2\src\automationUI\views.py", line 96, in index
+    ATE_RMData.objects.all.delete()
+AttributeError: 'function' object has no attribute 'delete'
+2017-08-16 15:10:47,767:get_response:Not Found: /favicon.ico
+2017-08-16 15:38:00,240:get_response:Not Found: /

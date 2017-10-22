@@ -1,0 +1,185 @@
+<!doctype html>
+{% block RMcontent %}
+    <!-- Release Management select scripts -->
+    <TR>
+        <TH COLSPAN=7><font size=4 face="Calibri" color="red">Release Management Test Suite Details</font></TH>
+    </TR>
+
+    <tr>
+        <TD class = "select" align="center" COLSPAN=7>
+            Environment <select name="RMenvironment" title="Please select environment" id="RMenvironment" onchange="setRMEnvironmentatRowLevel()">
+                    <option value="UAT4">UAT4</option>
+                    <option value="UAT1">UAT1</option>
+                    <option value="SIT4">SIT4</option>
+                    <option value="SIT1">SIT1</option>
+            </select>
+        </TD>
+    </tr>
+     <TR>
+          <TH><font face="Calibri" color="red" size="4">Environment</font></TH>
+          <TH><font face="Calibri" color="red" size="4">Test Script</font></TH>
+          <TH><font face="Calibri" color="red" size="4">Machine</font></TH>
+          <TH><font face="Calibri" color="red" size="4">Execute</font></TH>
+          <TH><font face="Calibri" color="red" size="4">Status</font></TH>
+          <TH COLSPAN=2><font face="Calibri" color="red" size="4">Action</font></TH>
+     </TR>
+    <TR ALIGN=CENTER>
+      <TD class = "select">
+            <select name="RMenvironment1" id="RMenvironment1" disabled>
+                    <option value="UAT4">UAT4</option>
+                    <option value="UAT1">UAT1</option>
+                    <option value="SIT4">SIT4</option>
+                    <option value="SIT1">SIT1</option>
+            </select>
+      </TD>
+      <td>
+            <select name="RMscriptname1">
+                    <option value="AP_PrintConfiguredQuote_PCKBP" selected >AP_PrintConfiguredQuote_PCKBP</option>
+                    <option value="AP_Product_Private Cage with kVA Based Power" disabled>AP_Product_Private Cage with kVA Based Power</option>
+                    <option value="AP_Product_ConfigurableAccessories" disabled>AP_Product_ConfigurableAccessories</option>
+                    <option value="AP_Product_EQX_IEPP_Equinix Internet Exchange Port" disabled>AP_Product_Equinix Internet Exchange Port</option>
+            </select>
+      </td>
+      <td style="display:none;">
+            <select name="RMProductType1">
+                    <option value="Other" selected >Other</option>
+                    <option value="Colo" disabled>Colo</option>
+                    <option value="Service" disabled>Service</option>
+                    <option value="Network" disabled>Network</option>
+            </select>
+      </td>
+      <TD class = "select">
+            <select name="RMmachine1">
+                <option value="dc1wnlrlg01" selected>dc1wnlrlg01</option>
+                <option value="ny2wnlrlg01" disabled>ny2wnlrlg01</option>
+                <option value="pa2wnlrlg01" disabled>pa2wnlrlg01</option>
+                <option value="fr2wnlrlg01" disabled>fr2wnlrlg01</option>
+            </select>
+      </TD>
+      <TD><input type="checkbox" checked = "checked" name="RMexecute1" disabled><input type="hidden" name="RMexecute1" value="on"></TD>
+
+      <TD> No Run </TD>
+      <TD><button onclick="AddRow()" title="Add Row" disabled>+</button> </TD>
+      <TD><button onclick="DeleteRow()" title="Delete Row" disabled>-</button> </TD>
+        <!--<TD><button title="Stop Script" disabled>X</button> </TD>-->
+    </TR>
+    <TR ALIGN=CENTER>
+      <TD class = "select">
+            <select name="RMenvironment2" id="RMenvironment2" disabled>
+                    <option value="UAT4">UAT4</option>
+                    <option value="UAT1">UAT1</option>
+                    <option value="SIT4">SIT4</option>
+                    <option value="SIT1">SIT1</option>
+            </select>
+      </TD>
+      <td>
+            <select name="RMscriptname2">
+                    <option value="AP_PrintConfiguredQuote_PCKBP" disabled >AP_PrintConfiguredQuote_PCKBP</option>
+                    <option value="AP_Product_Private Cage with kVA Based Power" selected>AP_Product_Private Cage with kVA Based Power</option>
+                    <option value="AP_Product_ConfigurableAccessories" disabled>AP_Product_ConfigurableAccessories</option>
+                    <option value="AP_Product_EQX_IEPP_Equinix Internet Exchange Port" disabled>AP_Product_Equinix Internet Exchange Port</option>
+            </select>
+      </td>
+      <td style="display:none;">
+            <select name="RMProductType2">
+                    <option value="Other" disabled >Other</option>
+                    <option value="Colo" selected>Colo</option>
+                    <option value="Service" disabled>Service</option>
+                    <option value="Network" disabled>Network</option>
+            </select>
+      </td>
+      <TD class = "select">
+            <select name="RMmachine2">
+                <option value="dc1wnlrlg01" disabled>dc1wnlrlg01</option>
+                <option value="ny2wnlrlg01" selected>ny2wnlrlg01</option>
+                <option value="pa2wnlrlg01" disabled>pa2wnlrlg01</option>
+                <option value="fr2wnlrlg01" disabled>fr2wnlrlg01</option>
+            </select>
+      </TD>
+      <TD><input type="checkbox" checked = "checked" name="RMexecute2" disabled><input type="hidden" name="RMexecute2" value="on"></TD>
+      <TD>No Run</TD>
+      <TD><button onclick="AddRow()" title="Add Row" disabled>+</button> </TD>
+      <TD><button onclick="DeleteRow()" title="Delete Row" disabled>-</button> </TD>
+        <!--<TD><button title="Stop Script" disabled>X</button> </TD>-->
+    </TR>
+    <TR ALIGN=CENTER>
+      <TD class = "select">
+            <select name="RMenvironment3" id="RMenvironment3" disabled>
+                    <option value="UAT4">UAT4</option>
+                    <option value="UAT1">UAT1</option>
+                    <option value="SIT4">SIT4</option>
+                    <option value="SIT1">SIT1</option>
+            </select>
+      </TD>
+      <td>
+            <select name="RMscriptname3">
+                    <option value="AP_PrintConfiguredQuote_PCKBP" disabled >AP_PrintConfiguredQuote_PCKBP</option>
+                    <option value="AP_Product_Private Cage with kVA Based Power" disabled>AP_Product_Private Cage with kVA Based Power</option>
+                    <option value="AP_Product_ConfigurableAccessories" selected>AP_Product_ConfigurableAccessories</option>
+                    <option value="AP_Product_EQX_IEPP_Equinix Internet Exchange Port" disabled>AP_Product_Equinix Internet Exchange Port</option>
+            </select>
+      </td>
+      <td style="display:none;">
+            <select name="RMProductType3">
+                    <option value="Other" disabled >Other</option>
+                    <option value="Colo" disabled>Colo</option>
+                    <option value="Service" selected>Service</option>
+                    <option value="Network" disabled>Network</option>
+            </select>
+      </td>
+      <TD class = "select">
+            <select name="RMmachine3">
+                <option value="ny2wnlrlg01" disabled >ny2wnlrlg01</option>
+                <option value="dc1wnlrlg01" disabled>dc1wnlrlg01</option>
+                <option value="pa2wnlrlg01" selected>pa2wnlrlg01</option>
+                <option value="fr2wnlrlg01" disabled>fr2wnlrlg01</option>
+            </select>
+      </TD>
+      <TD><input type="checkbox" checked = "checked" name="RMexecute3" disabled><input type="hidden" name="RMexecute3" value="on"></TD>
+      <TD>No Run</TD>
+      <TD><button onclick="AddRow()" title="Add Row" disabled>+</button> </TD>
+      <TD><button onclick="DeleteRow()" title="Delete Row" disabled>-</button> </TD>
+      <!--<TD><button title="Stop Script" disabled>X</button> </TD>-->
+    </TR>
+    <TR ALIGN=CENTER>
+      <TD class = "select">
+            <select name="RMenvironment4" id="RMenvironment4" disabled>
+                    <option value="UAT4">UAT4</option>
+                    <option value="UAT1">UAT1</option>
+                    <option value="SIT4">SIT4</option>
+                    <option value="SIT1">SIT1</option>
+            </select>
+      </TD>
+      <td>
+            <select name="RMscriptname4">
+                    <option value="AP_PrintConfiguredQuote_PCKBP" disabled >AP_PrintConfiguredQuote_PCKBP</option>
+                    <option value="AP_Product_Private Cage with kVA Based Power" disabled>AP_Product_Private Cage with kVA Based Power</option>
+                    <option value="AP_Product_ConfigurableAccessories" disabled>AP_Product_ConfigurableAccessories</option>
+                    <option value="AP_Product_EQX_IEPP_Equinix Internet Exchange Port" selected>AP_Product_Equinix Internet Exchange Port</option>
+            </select>
+      </td>
+      <td style="display:none;">
+            <select name="RMProductType4">
+                    <option value="Other" disabled >Other</option>
+                    <option value="Colo" disabled>Colo</option>
+                    <option value="Service" disabled>Service</option>
+                    <option value="Network" selected>Network</option>
+            </select>
+      </td>
+      <TD class = "select">
+            <select name="RMmachine4">
+                <option value="ny2wnlrlg01" disabled >ny2wnlrlg01</option>
+                <option value="dc1wnlrlg01" disabled>dc1wnlrlg01</option>
+                <option value="pa2wnlrlg01" disabled>pa2wnlrlg01</option>
+                <option value="fr2wnlrlg01" selected>fr2wnlrlg01</option>
+            </select>
+      </TD>
+      <TD><input type="checkbox" checked = "checked" name="RMexecute4" disabled><input type="hidden" name="RMexecute4" value="on"></TD>
+      <TD>No Run</TD>
+      <TD><button title="Add Row" disabled>+</button> </TD>
+      <TD><button title="Delete Row" disabled>-</button> </TD>
+      <!--<TD><button title="Stop Script" disabled>X</button> </TD>-->
+    </TR>
+{% endblock RMcontent %}
+
+

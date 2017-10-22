@@ -1,0 +1,217 @@
+{% extends "baseafterupdate.html" %}
+{% block RMcontent %}
+<!-- Release Management select scripts -->
+ <TR>
+      <TH><font face="Calibri" color="red" size="4">Environment</font></TH>
+      <TH><font face="Calibri" color="red" size="4">Test Script</font></TH>
+      <TH><font face="Calibri" color="red" size="4">Machine</font></TH>
+      <TH><font face="Calibri" color="red" size="4">Execute</font></TH>
+      <TH><font face="Calibri" color="red" size="4">Status</font></TH>
+      <TH COLSPAN=2><font face="Calibri" color="red" size="4">Action</font></TH>
+ </TR>
+<TR ALIGN=CENTER>
+  <TD class = "select">
+        <select name="RMenvironment1" id="RMenvironment1" disabled>
+                <option>{{RMenvironment}}</option>
+        </select>
+  </TD>
+  <td>
+        <select name="RMscriptname1">
+                <option value="AP_PrintConfiguredQuote_PCKBP" selected >AP_PrintConfiguredQuote_PCKBP</option>
+                <option value="AP_Product_Private Cage with kVA Based Power" disabled>AP_Product_Private Cage with kVA Based Power</option>
+                <option value="AP_Product_ConfigurableAccessories" disabled>AP_Product_ConfigurableAccessories</option>
+                <option value="AP_Product_EQX_IEPP_Equinix Internet Exchange Port" disabled>AP_Product_EQX_IEPP_Equinix Internet Exchange Port</option>
+        </select>
+  </td>
+  <TD class = "select">
+        <select name="RMmachine1">
+            <option value="dc1wnlrlg01" selected>dc1wnlrlg01</option>
+            <option value="ny2wnlrlg01" disabled>ny2wnlrlg01</option>
+            <option value="pa2wnlrlg01" disabled>pa2wnlrlg01</option>
+            <option value="fr2wnlrlg01" disabled>fr2wnlrlg01</option>
+        </select>
+  </TD>
+  <TD><input type="checkbox" checked = "checked" name="RMexecute1" disabled><input type="hidden" name="RMexecute1" value="on"></TD>
+  <TD>
+    {%if RM1statusval == "Passed" %}
+    <b><font color="Green">{{RM1statusval}}</font></b>
+    {%elif RM1statusval == "Failed"%}
+    <b><font color="Red">{{RM1statusval}}</font></b>
+    {%elif RM1statusval == "Running"%}
+    <b><font color="blue">{{RM1statusval}}</font></b>
+    {%elif RM1statusval == "Not Completed"%}
+    <b><font color="blue">Running</font></b>
+    {%else%}
+    <b><font color="black">{{RM1statusval}}</font></b>
+    {%endif %}
+  </TD>
+  <TD><button onclick="AddRow()" title="Add Row" disabled>+</button> </TD>
+  <TD><button onclick="DeleteRow()" title="Delete Row" disabled>-</button> </TD>
+    <!--<TD><button title="Stop Script" disabled>X</button> </TD>-->
+</TR>
+<TR ALIGN=CENTER>
+  <TD class = "select">
+        <select name="RMenvironment2" id="RMenvironment2" disabled>
+                <option>{{RMenvironment}}</option>
+        </select>
+  </TD>
+  <td>
+        <select name="RMscriptname2">
+                <option value="AP_PrintConfiguredQuote_PCKBP" disabled >AP_PrintConfiguredQuote_PCKBP</option>
+                <option value="AP_Product_Private Cage with kVA Based Power" selected>AP_Product_Private Cage with kVA Based Power</option>
+                <option value="AP_Product_ConfigurableAccessories" disabled>AP_Product_ConfigurableAccessories</option>
+                <option value="AP_Product_EQX_IEPP_Equinix Internet Exchange Port" disabled>AP_Product_EQX_IEPP_Equinix Internet Exchange Port</option>
+        </select>
+  </td>
+  <TD class = "select">
+        <select name="RMmachine2">
+            <option value="dc1wnlrlg01" disabled>dc1wnlrlg01</option>
+            <option value="ny2wnlrlg01" selected>ny2wnlrlg01</option>
+            <option value="pa2wnlrlg01" disabled>pa2wnlrlg01</option>
+            <option value="fr2wnlrlg01" disabled>fr2wnlrlg01</option>
+        </select>
+  </TD>
+  <TD><input type="checkbox" checked = "checked" name="RMexecute2" disabled><input type="hidden" name="RMexecute2" value="on"></TD>
+    <TD>
+    {%if RM2statusval == "Passed" %}
+    <b><font color="Green">{{RM2statusval}}</font></b>
+    {%elif RM2statusval == "Failed"%}
+    <b><font color="Red">{{RM2statusval}}</font></b>
+    {%elif RM2statusval == "Running"%}
+    <b><font color="blue">{{RM2statusval}}</font></b>
+    {%elif RM2statusval == "Not Completed"%}
+    <b><font color="blue">Running</font></b>
+    {%else%}
+    <b><font color="black">{{RM2statusval}}</font></b>
+    {%endif %}
+  </TD>
+  <TD><button onclick="AddRow()" title="Add Row" disabled>+</button> </TD>
+  <TD><button onclick="DeleteRow()" title="Delete Row" disabled>-</button> </TD>
+    <!--<TD><button title="Stop Script" disabled>X</button> </TD>-->
+</TR>
+<TR ALIGN=CENTER>
+  <TD class = "select">
+        <select name="RMenvironment3" id="RMenvironment3" disabled>
+                <option>{{RMenvironment}}</option>
+        </select>
+  </TD>
+  <td>
+        <select name="RMscriptname3">
+               <option value="AP_PrintConfiguredQuote_PCKBP" disabled >AP_PrintConfiguredQuote_PCKBP</option>
+               <option value="AP_Product_Private Cage with kVA Based Power" disabled>AP_Product_Private Cage with kVA Based Power</option>
+               <option value="AP_Product_ConfigurableAccessories" selected>AP_Product_ConfigurableAccessories</option>
+               <option value="AP_Product_EQX_IEPP_Equinix Internet Exchange Port" disabled>AP_Product_EQX_IEPP_Equinix Internet Exchange Port</option>
+        </select>
+  </td>
+  <TD class = "select">
+        <select name="RMmachine3">
+            <option value="ny2wnlrlg01" disabled >ny2wnlrlg01</option>
+            <option value="dc1wnlrlg01" disabled>dc1wnlrlg01</option>
+            <option value="pa2wnlrlg01" selected>pa2wnlrlg01</option>
+            <option value="fr2wnlrlg01" disabled>fr2wnlrlg01</option>
+        </select>
+  </TD>
+  <TD><input type="checkbox" checked = "checked" name="RMexecute3" disabled><input type="hidden" name="RMexecute3" value="on"></TD>
+  <TD>
+    {%if RM3statusval == "Passed" %}
+    <b><font color="Green">{{RM3statusval}}</font></b>
+    {%elif RM3statusval == "Failed"%}
+    <b><font color="Red">{{RM3statusval}}</font></b>
+    {%elif RM3statusval == "Running"%}
+    <b><font color="blue">{{RM3statusval}}</font></b>
+    {%elif RM3statusval == "Not Completed"%}
+    <b><font color="blue">Running</font></b>
+    {%else%}
+    <b><font color="black">{{RM3statusval}}</font></b>
+    {%endif %}
+  </TD>
+  <TD><button onclick="AddRow()" title="Add Row" disabled>+</button> </TD>
+  <TD><button onclick="DeleteRow()" title="Delete Row" disabled>-</button> </TD>
+  <!--<TD><button title="Stop Script" disabled>X</button> </TD>-->
+</TR>
+<TR ALIGN=CENTER>
+  <TD class = "select">
+        <select name="RMenvironment4" id="RMenvironment4" disabled>
+                <option>{{RMenvironment}}</option>
+        </select>
+  </TD>
+  <td>
+        <select name="RMscriptname4">
+                <option value="AP_PrintConfiguredQuote_PCKBP" disabled >AP_PrintConfiguredQuote_PCKBP</option>
+                <option value="AP_Product_Private Cage with kVA Based Power" disabled>AP_Product_Private Cage with kVA Based Power</option>
+                <option value="AP_Product_ConfigurableAccessories" disabled>AP_Product_ConfigurableAccessories</option>
+                <option value="AP_Product_EQX_IEPP_Equinix Internet Exchange Port" selected>AP_Product_EQX_IEPP_Equinix Internet Exchange Port</option>
+        </select>
+  </td>
+  <TD class = "select">
+        <select name="RMmachine4">
+            <option value="ny2wnlrlg01" disabled >ny2wnlrlg01</option>
+            <option value="dc1wnlrlg01" disabled>dc1wnlrlg01</option>
+            <option value="pa2wnlrlg01" disabled>pa2wnlrlg01</option>
+            <option value="fr2wnlrlg01" selected>fr2wnlrlg01</option>
+        </select>
+  </TD>
+  <TD><input type="checkbox" checked = "checked" name="RMexecute4" disabled><input type="hidden" name="RMexecute4" value="on"></TD>
+  <TD>
+    {%if RM4statusval == "Passed" %}
+    <b><font color="Green">{{RM4statusval}}</font></b>
+    {%elif RM4statusval == "Failed"%}
+    <b><font color="Red">{{RM4statusval}}</font></b>
+    {%elif RM4statusval == "Running"%}
+    <b><font color="blue">{{RM4statusval}}</font></b>
+    {%elif RM4statusval == "Not Completed"%}
+    <b><font color="blue">Running</font></b>
+    {%else%}
+    <b><font color="black">{{RM4statusval}}</font></b>
+    {%endif %}
+  </TD>
+  <TD><button title="Add Row" disabled>+</button> </TD>
+  <TD><button title="Delete Row" disabled>-</button> </TD>
+  <!--<TD><button title="Stop Script" disabled>X</button> </TD>-->
+</TR>
+{% endblock RMcontent %}
+
+{% block lightsanitycontent %}
+<!-- lightsanitycontent select scripts -->
+ <TR>
+      <TH><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Environment</p></TH>
+      <TH><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Test Script</p></TH>
+      <TH><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Machine</p></TH>
+      <TH><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Execute</p></TH>
+      <TH><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Status</p></TH>
+      <TH COLSPAN=2><p style=font-size:11pt;font-family:Calibri;color:black;background-color:SkyBlue>Action</p></TH>
+ </TR>
+<TR ALIGN=CENTER>
+  <TD class = "select">
+        <select name="lsenvironment">
+                <option value="UAT4">UAT4</option>
+                <option value="UAT1">UAT1</option>
+                <option value="SIT4">SIT4</option>
+                <option value="SIT1">SIT1</option>
+        </select>
+  </TD>
+  <td>
+        <select name="lsscript">
+                <option value="AP_PrintConfiguredQuote_PCKBP" selected>AP_PrintConfiguredQuote_PCKBP</option>
+                <option value="AP_Product_Private Cage with kVA Based Power">AP_Product_Private Cage with kVA Based Power</option>
+                <option value="AP_Product_ConfigurableAccessories">AP_Product_ConfigurableAccessories</option>
+                <option value="AP_Product_EQX_IEPP_Equinix Internet Exchange Port">AP_Product_Equinix Internet Exchange Port</option>
+        </select>
+  </td>
+  <TD class = "select">
+        <select name="lsmachine">
+            <option value="ny2wnlrlg01" selected>ny2wnlrlg01</option>
+            <option value="dc1wnlrlg01">dc1wnlrlg01</option>
+            <option value="pa2wnlrlg01">pa2wnlrlg01</option>
+            <option value="fr2wnlrlg01">fr2wnlrlg01</option>
+        </select>
+  </TD>
+  <TD><input type="checkbox" checked = "checked" name="lsexecute"></TD>
+  <TD>No Run</TD>
+  <TD><button title="Add Row" onclick="addrowforlightsanity();return false;" name="Add Row">+</button> </TD>
+  <TD><button title="Delete Row" name="Delete Row" onclick="deleterowforlightsanity(this)">-</button> </TD>
+    <!--<TD><button title="Stop Script" disabled>X</button> </TD>-->
+</TR>
+{% endblock lightsanitycontent %}
+
+

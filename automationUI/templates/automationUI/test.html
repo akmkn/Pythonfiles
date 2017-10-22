@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="text" name="textfield2" placeholder="hello">
+    <select name="RMenvironment1" title="Please select environment">
+            <option value="UAT4" selected>UAT4</option>
+            <option value="SIT4" >SIT4</option>
+            <option value="SIT1" >SIT1</option>
+    </select>
+    <input type="submit" value="click">
+</form>
+</body>
+</html>
